@@ -18,6 +18,8 @@ public class GameController : MonoBehaviour {
 	private Rigidbody currentRigidBody;
 	private bool isLocked;
 
+	public static float drag;
+
 
 	public Vector3 pos;
 	int cubesCreated;
@@ -52,6 +54,7 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		drag = 10;
 		finalscoreHeadlinePos = finalscoreHeadline.transform.position;
 		finalscoreTextPos = finalscoreText.transform.position;
 		highscoreHeadlinePos = highscoreHeadline.transform.position;
@@ -151,6 +154,10 @@ public class GameController : MonoBehaviour {
 
 		currentGameObject = Instantiate(prefab, new Vector3(-10, 70, 10), Quaternion.identity);
 		currentGameObject.name = "test";
+		Rigidbody rb = currentGameObject.GetComponent<Rigidbody>();
+		rb.drag = drag;
+		drag -= 0.1f;
+
 
 		for (int i = 0; i <= 3; i++){			
 			GameObject currentGameObjectCube = currentGameObject.transform.GetChild(i).gameObject;

@@ -35,7 +35,7 @@ public class CubeMove : MonoBehaviour {
 		
 
 		if (gameObject.name == "test"){
-
+			cubeRigidbody.drag = 1;
 
 		cubeRigidbody.useGravity = true;
 		int intY = Mathf.RoundToInt(gameObject.transform.position.y/2.5f);
@@ -45,6 +45,7 @@ public class CubeMove : MonoBehaviour {
 		gameObject.transform.position = new Vector3(intX * 2.5f, intY * 2.5f, intZ * 2.5f);
 		GameObject plane = GameObject.Find("Plane");
 		plane.GetComponent<GameController>().CreateObject();
+
 
 		
 
@@ -345,6 +346,8 @@ public class CubeMove : MonoBehaviour {
 		}
 
 		if (isFull == true){
+			if (GameController.drag <= 9.5f)
+			GameController.drag += 0.5f;
 			//GameObject.Find("Plane").transform.position += new Vector3 (0, 5, 0);
 			//Debug.Log("true");
 			GameController.score += 100;
