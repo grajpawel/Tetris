@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Start.unity
+    guid: b977941b54641cc438cede94c860cd28
+  - enabled: 1
+    path: Assets/Game.unity
+    guid: f1e2339e4cd284d45bcfebc13642d102
+  - enabled: 0
+    path: Assets/Halper.unity
+    guid: f5e222844db582b418171155ab0eaec8

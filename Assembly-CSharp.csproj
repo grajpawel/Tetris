@@ -51,9 +51,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\BGScript.cs" />
      <Compile Include="Assets\Scripts\CameraScript.cs" />
      <Compile Include="Assets\Scripts\CubeMove.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\HSBColor.cs" />
+     <Compile Include="Assets\Scripts\LoadHelper.cs" />
+     <Compile Include="Assets\Scripts\replayButton.cs" />
+     <Compile Include="Assets\Scripts\startBG.cs" />
+     <Compile Include="Assets\Scripts\startButton.cs" />
      <None Include="Assets\DOTween\readme.txt" />
      <None Include="Assets\DOTween\DOTween50.xml" />
      <None Include="Assets\DOTween\DOTween46.xml" />

@@ -74,6 +74,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4913454768707008}
   - component: {fileID: 114707745885771396}
+  - component: {fileID: 54810296844070618}
   m_Layer: 0
   m_Name: T
   m_TagString: Untagged
@@ -332,13 +333,28 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1180476430191320}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &54810296844070618
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1341205605257968}
+  serializedVersion: 2
+  m_Mass: 200000
+  m_Drag: 10
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 122
+  m_CollisionDetection: 0
 --- !u!65 &65389828926385604
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1180476430191320}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 38ae67bbbeb7b0142b8e209c35b8ccaa, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -350,7 +366,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1309507294961802}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 38ae67bbbeb7b0142b8e209c35b8ccaa, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -362,7 +378,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1887793380704408}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 38ae67bbbeb7b0142b8e209c35b8ccaa, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -374,7 +390,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1063240981280646}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 38ae67bbbeb7b0142b8e209c35b8ccaa, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -391,3 +407,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5297aaef7cc58554c8a2b6fb9845e69e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameTime: 0

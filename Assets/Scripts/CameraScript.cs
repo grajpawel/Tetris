@@ -5,11 +5,14 @@ using DG.Tweening;
 
 public class CameraScript : MonoBehaviour {
 
-	private bool isSide = true;
+	private int camPos = 1;
 	public Vector3 upPos;
 	public Vector3 upRot;
 	public Vector3 downPos;
 	public Vector3 downRot;
+
+	public Vector3 topPos;
+	public Vector3 topRot;
 
 	// Use this for initialization
 	void Start () {
@@ -20,17 +23,25 @@ public class CameraScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.Q)){
-			if (isSide == true){
+
+		if (camPos == 1){
 				transform.DOMove(upPos, 1);
 				transform.DORotate(upRot, 1);
-				isSide = false;
-			} else {
+		} else if (camPos == 2) {
 				transform.DOMove(downPos, 1);
 				transform.DORotate(downRot, 1);
-				isSide = true;
+		}  else if (camPos == 3) {
+				transform.DOMove(topPos, 1);
+				transform.DORotate(topRot, 1);
+		}
+		
+				if (Input.GetKeyDown(KeyCode.Q)){
+					camPos++;
+					if (camPos >= 4)
+					camPos = 1;
+			
 			}
 
 		}
 	}
-}
+
